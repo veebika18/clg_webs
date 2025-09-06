@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: navy;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    color: black;
+    display: block;
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Announcements */
+.announcements {
+    background: yellow;
+    padding: 10px;
+    font-weight: bold;
+    color: red;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1.5s ease-out;
+}
+
+.zoom-in {
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+/* Key Highlights Section */
+.highlights {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased gap between cards */
+    padding: 30px; /* Added padding for better spacing */
+    flex-wrap: wrap;
+    margin-bottom: 10px; /* Reducing space below the cards */
+}
+
+/* Individual Cards */
+.card {
+    width: 200px; /* Compact card width */
+    text-align: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Added margin around cards */
+}
+
+/* Reduce Image Size */
+.card img {
+    width: 80px;  
+    height: 80px; 
+    object-fit: contain; 
+    margin-bottom: 15px; /* Increased spacing below image */
+}
+
+/* Text Styling */
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 8px; /* Added space below heading */
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.4; /* Improved readability */
+}
+/* About Us Section */
+#about-us {
+    background: #f8f8f8;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+#about-us h2 {
+    font-size: 24px;
+    color: #002147;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+}
+#departments {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f8f8;
+}
+
+.department-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between department cards */
+    flex-wrap: wrap;
+}
+
+.dept-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Small width for compact cards */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dept-card img {
+    width: 100px; /* Small image size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.dept-card:hover {
+    transform: scale(1.05);
+}
